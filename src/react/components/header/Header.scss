@@ -1,0 +1,72 @@
+@import '../../../assets/sass/main.scss';
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(126, 213,111,0.8),
+    rgba(40, 180,131,0.8)),
+    url('../../../assets/img/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  //create silouette shape for brackground image
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+
+  &__logo-container {
+    // position from its parent container (.header)
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    // width is adjusted by browser
+    height: 3.5rem;
+  }
+
+  &__heading-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    //shift from parent element
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    a {
+      animation: 2s ease-out 2s backwards fadeIn;
+    }
+  }
+}
+
+.heading {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  &-main{
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation: moveInUp 2s ease-out;
+    backface-visibility: hidden;
+    /*
+      animation-timing-function: ease-in; starts slow and accelerate over time.
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 3
+      animation-delay: 3s
+    */
+  };
+
+  &-sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    animation: 2s ease-out 2s backwards fadeIn;
+  }
+}

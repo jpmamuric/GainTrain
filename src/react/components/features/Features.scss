@@ -1,0 +1,46 @@
+@import '../../../assets/sass/main.scss';
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(126, 213,111,0.8),
+    rgba(40, 180,131,0.8)),
+    url('../../../assets/img/nat-4.jpg');
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  // selects every direct child.
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.feature-box {
+  background-color: rgba($color-white,.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: .3rem;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  transition: transform .2s;
+
+  &__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+
+    // how to set text color to background color
+      // set color
+      background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+      // fill image in background
+      -webkit-background-clip: text;
+      // allow image to be seen.
+      color: transparent;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}

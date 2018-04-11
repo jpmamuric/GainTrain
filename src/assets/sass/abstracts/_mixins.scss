@@ -1,0 +1,15 @@
+@mixin scaleOnHover {
+  &::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    // use content prop for pseudo element to work;
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
