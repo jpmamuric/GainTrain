@@ -245,6 +245,28 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
 
+.review {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: .3rem;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem; }
+  .review__shape {
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+    transform: translateX(-3rem); }
+  .review__img {
+    width: 100%; }
+
 .composition {
   position: relative; }
   .composition__photo {

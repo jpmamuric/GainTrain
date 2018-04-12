@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Header from  '../header/Header';
 import About from '../about/About';
 import Features from '../features/Features';
-import Tours from '../tours/Tours';
+import Pricing from '../pricing/Pricing';
+import Reviews from '../reviews/Reviews';
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
         <main>
           <About />
           <Features />
-          <Tours />
+          <Pricing />
+          <Reviews />
         </main>
       </div>
     );

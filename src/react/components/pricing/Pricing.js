@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Tours.css';
+import './Pricing.css';
 
-import Data from './ToursData.json'
+import Data from './PricingData.json'
 
 const Tours = () => (
   <section className='section-tours'>
