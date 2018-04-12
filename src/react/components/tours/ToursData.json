@@ -1,0 +1,41 @@
+[
+ {
+   "heading": "Fire Training",
+   "details": {
+     "days": "7 Day Course",
+     "size": "Up to 30 people",
+     "online": "Available",
+     "difficulty": "Easy"
+   },
+   "ctaPrice": "99",
+   "pictureModifier": "card__picture--1",
+   "headingModifier": "card__heading-span--1",
+   "backModifier": "card__side--back-1"
+ },
+ {
+   "heading": "Water Training",
+   "details": {
+     "days": "15 Day Course",
+     "size": "Up to 30 people",
+     "online": "Available",
+     "difficulty": "Medium"
+   },
+   "ctaPrice": "199",
+   "pictureModifier": "card__picture--2",
+   "headingModifier": "card__heading-span--2",
+   "backModifier": "card__side--back-2"
+ },
+ {
+   "heading": "Earth Training",
+   "details": {
+     "days": "30 Day Course",
+     "size": "Up to 30 people",
+     "online": "Available",
+     "difficulty": "Hard"
+   },
+   "ctaPrice": "299",
+   "pictureModifier": "card__picture--3",
+   "headingModifier": "card__heading-span--3",
+   "backModifier": "card__side--back-3"
+ }
+]

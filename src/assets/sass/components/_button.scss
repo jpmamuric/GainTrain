@@ -51,6 +51,15 @@
     }
   }
 
+  &--green {
+    background-image: linear-gradient(to left bottom, $color-primary-light, $color-primary-dark );
+    color: $color-white;
+
+    &::after {
+      background-image: linear-gradient(to left bottom, $color-primary-light, $color-primary-dark )
+    }
+  }
+
   &-text {
     &:link,
     &:visited {
