@@ -7,6 +7,12 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+  & > * {
+    // Will not work because you cant have multiple transforms.
+    // transform: skewX(-12deg);
+  }
 
   &__shape {
     width: 15rem;
@@ -21,10 +27,43 @@
 
     // when elements are floated better to use transform.
     float: left;
-    transform: translateX(-3rem);
+    transform: translateX(-3rem) skewX(12deg);
   }
 
   &__img {
-    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+  }
+
+  &__text {
+      transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+
+    //fix small glitch with transitions
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(.3rem) brightness(90%);
   }
 }

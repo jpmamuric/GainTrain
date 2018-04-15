@@ -4,7 +4,7 @@ import './Pricing.css';
 
 import Data from './PricingData.json'
 
-const Tours = () => (
+const Pricing = () => (
   <section className='section-tours'>
     <div className='util-center-text util-margin-bottom-big' >
       <h2 className='heading-secondary'> Most Popular Courses </h2>
@@ -13,7 +13,7 @@ const Tours = () => (
     <div className='row'>
       {
         Data.map(course => (
-          <div className='col-1-of-3'>
+          <div key={course.heading} className='col-1-of-3'>
             <div className='card'>
               <div className='card__side card__side--front'>
                 <div className={`card__picture ${course.pictureModifier}`}/>
@@ -54,4 +54,4 @@ const Tours = () => (
   </section>
 )
 
-export default Tours;
+export default Pricing;

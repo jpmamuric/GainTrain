@@ -1,0 +1,12 @@
+[
+  {
+    "name": "John Doe",
+    "heading":"I had an amazing time!",
+    "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur. Aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur."
+  },
+  {
+    "name": "Jane Doe",
+    "heading":"Worth every penny!",
+    "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur. Aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur."
+  }
+]

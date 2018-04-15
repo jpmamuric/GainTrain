@@ -180,6 +180,7 @@ body {
     font-weight: 100; }
 
 .btn:link, .btn:visited {
+  font-size: 1.5em;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -229,21 +230,37 @@ body {
 
 .btn-text:link, .btn-text:visited {
   color: #32CD32;
-  text-decoration: none;
+  text-decoration: underline;
   display: inline-block;
   padding: .3rem;
   font-size: 1.6rem;
-  transition: all .4s; }
+  transition: all .4s;
+  padding: 1rem; }
 
 .btn-text:hover {
   color: #fff;
   background-color: #32CD32;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0.2rem); }
+  transform: translateY(0.2rem);
+  border-radius: 3px; }
 
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  opacity: .20;
+  overflow: hidden; }
+  .background-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .review {
   width: 75%;
@@ -253,7 +270,8 @@ body {
   border-radius: .3rem;
   padding: 6rem;
   padding-left: 9rem;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
   .review__shape {
     width: 15rem;
     height: 15rem;
@@ -263,9 +281,32 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     float: left;
-    transform: translateX(-3rem); }
+    transform: translateX(-3rem) skewX(12deg); }
   .review__img {
-    width: 100%; }
+    height: 100%;
+    backface-visibility: hidden;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s; }
+  .review__text {
+    transform: skewX(12deg); }
+  .review__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .review:hover .review__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .review:hover .review__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(90%); }
 
 .composition {
   position: relative; }

@@ -1,0 +1,18 @@
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  opacity: .20;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+
+    // the element will fill entire parent while mainting aspect ratio.
+    object-fit: cover;
+  }
+}
