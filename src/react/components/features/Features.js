@@ -4,7 +4,7 @@ import './Features.css'
 
 const Features = () => {
   return (
-    <section className='section-features'>
+    <section className='section-features' id='benefits'>
       <div className='row'>
         <div className='col-1-of-4'>
           <div className='feature-box'>

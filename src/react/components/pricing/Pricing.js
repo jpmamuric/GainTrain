@@ -5,7 +5,7 @@ import './Pricing.css';
 import Data from './PricingData.json'
 
 const Pricing = () => (
-  <section className='section-tours'>
+  <section className='section-tours' id='pricing'>
     <div className='util-center-text util-margin-bottom-big' >
       <h2 className='heading-secondary'> Most Popular Courses </h2>
     </div>
@@ -37,7 +37,7 @@ const Pricing = () => (
                     <p className='card__price-only'>Only</p>
                     <p className='card__price-value'>${course.ctaPrice}</p>
                   </div>
-                  <a href='/' className='btn btn--white'>Enroll Now!</a>
+                  <a href='#popup' className='btn btn--white'>Enroll Now!</a>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import image8 from '../../../assets/img/nat-8.jpg';
 import './Reviews.css';
 
 const Reviews = () => (
-  <section className='section-reviews'>
+  <section className='section-reviews' id='review'>
     <div className='background-video'>
       <video
         autoPlay
