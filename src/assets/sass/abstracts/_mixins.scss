@@ -20,3 +20,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+/*
+
+  0    - 600px  Phone
+  600  - 900px  Tablet
+  900  - 1200px Landscape
+  1200 - 1800px Desktop (normal desktop first approach)
+  1800 +        Big Desktop
+
+*/
+//
+@mixin mq-phone {
+  @media (max-width: 600px) { @content };
+}

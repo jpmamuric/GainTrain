@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Nav.css'
+import '../../../assets/sass/main.scss';
 
 class Nav extends Component {
   state = {

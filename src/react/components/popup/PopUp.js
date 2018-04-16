@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './PopUp.css';
+import '../../../assets/sass/main.scss';
 import image9 from '../../../assets/img/nat-9.jpg';
 
 const Popup = () => (

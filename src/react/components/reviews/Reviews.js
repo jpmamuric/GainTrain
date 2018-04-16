@@ -1,11 +1,10 @@
 import React from 'react';
 
 import reviewData from './Reviews.json';
-
 import videoMp4 from '../../../assets/img/video.mp4';
 import videoWebm from '../../../assets/img/video.webm';
 import image8 from '../../../assets/img/nat-8.jpg';
-import './Reviews.css';
+import '../../../assets/sass/main.scss';
 
 const Reviews = () => (
   <section className='section-reviews' id='review'>

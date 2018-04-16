@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Footer.css';
+import '../../../assets/sass/main.scss';
 
 import greenLogo2 from '../../../assets/img/favicon.png'
 
@@ -24,7 +24,7 @@ const Footer = () => {
         <div className='col-1-of-2'>
           <p className='footer__copyright'>
             <span className='footer__span'>
-              Built by Copyright &copy; <a href='/' className='footer__link'>Jan Peter Mamuric </a>. 
+              Built by Copyright &copy; <a href='/' className='footer__link'>Jan Peter Mamuric </a>.
               2017 - { new Date().getFullYear() }.
             </span>
 

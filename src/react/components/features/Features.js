@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Features.css'
+import '../../../assets/sass/main.scss';
 
 const Features = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './About.css';
+import '../../../assets/sass/main.scss';
 
 import nat1 from '../../../assets/img/nat-1-large.jpg'
 import nat2 from '../../../assets/img/nat-2-large.jpg'

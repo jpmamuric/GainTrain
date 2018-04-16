@@ -1,7 +1,6 @@
 import React from 'react';
 
-import './Pricing.css';
-
+import '../../../assets/sass/main.scss';
 import Data from './PricingData.json'
 
 const Pricing = () => (
