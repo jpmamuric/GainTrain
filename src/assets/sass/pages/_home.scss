@@ -16,6 +16,11 @@ HEADER
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
 
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
+    }
+
     &__logo-container {
       // position from its parent container (.header)
       position: absolute;
@@ -50,7 +55,7 @@ HEADER
 
     &-main{
       display: block;
-      font-size: 5rem;
+      font-size: 6rem;
       font-weight: 400;
       letter-spacing: 1rem;
       animation: moveInUp 2s ease-out;
@@ -62,6 +67,10 @@ HEADER
         animation-iteration-count: 3
         animation-delay: 3s
       */
+
+      @include respond(phone) {
+        font-size: 5rem;
+      }
     };
 
     &-sub {
@@ -70,7 +79,12 @@ HEADER
       font-weight: 700;
       letter-spacing: 1rem;
       animation: 2s ease-out 2s backwards fadeIn;
+
+      @include respond(phone) {
+        letter-spacing: .5rem;
+      }
     }
+
   }
 
 
@@ -81,6 +95,10 @@ ABOUT
   background-color: $color-grey-light;
   padding: 25rem 0;
   margin-top: -20vh;
+
+  @include respond(tablet-portrait) {
+    padding: 20rem 0;
+  }
 }
 
 .heading {
@@ -97,6 +115,14 @@ ABOUT
 
     // add transition property for transforms to work.
     transition: all .2s;
+
+    @include respond(tablet-portrait) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
 
     &:hover {
       letter-spacing: .2rem;
@@ -123,6 +149,10 @@ FEATURES
   // selects every direct child.
   & > * {
     transform: skewY(7deg);
+  }
+
+  @include respond(tablet-portrait) {
+    padding: 15rem 0;
   }
 }
 
@@ -161,6 +191,10 @@ PRICING
   background-color: $color-grey-light;
   padding:  25rem 0 5rem 0;
   margin-top: -10rem;
+
+  @include respond(tablet-portrait) {
+    padding: 20rem 0 5rem 0;
+  }
 }
 
 /**************************
@@ -179,6 +213,9 @@ FOOTER
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond(tablet-portrait) {
+    padding: 8rem 0;
+  }
 
   &__span {
     font-size: 1.8rem;
@@ -186,11 +223,27 @@ FOOTER
 
   &__logo-box {
     text-align: center;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__logo {
     width: 15rem;
     height: auto;
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 2rem;
+    display: inline-block;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -227,8 +280,15 @@ FOOTER
   }
 
   &__copyright {
+    border-top: 1px solid $color-grey-dark;
+    padding-top: 2rem;
     width: 80%;
     float: right;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      float: none;
+    }
   }
 
 }

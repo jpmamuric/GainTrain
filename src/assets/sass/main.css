@@ -6,6 +6,15 @@
   1200 - 1800px Desktop (normal desktop first approach)
   1800 +        Big Desktop
 
+
+$breakpoint argument choices:
+ phone
+ tablet-portrait
+ tablet-landscape
+ desktop
+
+ em = best choice for media queries
+ 1em = 16px
 */
 @keyframes moveInUp {
   0% {
@@ -32,20 +41,31 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 600px) {
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 600px) {
+  @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: sans-serif;
   /* font-size: 1rem; */
   line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
+  color: #777; }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -77,6 +97,13 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: "";
     display: table;
@@ -85,6 +112,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -109,6 +143,10 @@ HEADER
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-container {
     position: absolute;
     top: 4rem;
@@ -130,7 +168,7 @@ HEADER
   margin-bottom: 6rem; }
   .heading-main {
     display: block;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 400;
     letter-spacing: 1rem;
     animation: moveInUp 2s ease-out;
@@ -142,12 +180,18 @@ HEADER
         animation-iteration-count: 3
         animation-delay: 3s
       */ }
+    @media (max-width: 37.5em) {
+      .heading-main {
+        font-size: 5rem; } }
   .heading-sub {
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1rem;
     animation: 2s ease-out 2s backwards fadeIn; }
+    @media (max-width: 37.5em) {
+      .heading-sub {
+        letter-spacing: .5rem; } }
 
 /**************************
 ABOUT
@@ -156,6 +200,9 @@ ABOUT
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 20rem 0; } }
 
 .heading-secondary {
   font-size: 3rem;
@@ -166,6 +213,12 @@ ABOUT
   -webkit-background-clip: text;
   color: transparent;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     letter-spacing: .2rem;
     transform: skewY(-10deg) skewX(15deg);
@@ -182,6 +235,9 @@ FEATURES
   margin-top: -10rem; }
   .section-features > * {
     transform: skewY(7deg); }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 15rem 0; } }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -209,6 +265,9 @@ PRICING
   background-color: #f7f7f7;
   padding: 25rem 0 5rem 0;
   margin-top: -10rem; }
+  @media (max-width: 56.25em) {
+    .section-tours {
+      padding: 20rem 0 5rem 0; } }
 
 /**************************
 REVIEWS
@@ -224,13 +283,28 @@ FOOTER
   background-color: #28b485;
   padding: 10rem 0;
   font-size: 1.4rem; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__span {
     font-size: 1.8rem; }
   .footer__logo-box {
     text-align: center; }
+    @media (max-width: 56.25em) {
+      .footer__logo-box {
+        width: 100%;
+        text-align: center; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -252,8 +326,14 @@ FOOTER
     border-radius: 3px;
     padding: 0.5rem; }
   .footer__copyright {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
     width: 80%;
     float: right; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 .card {
   cursor: pointer;
@@ -476,6 +556,14 @@ FOOTER
   z-index: 2000;
   text-align: center;
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -489,6 +577,14 @@ FOOTER
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__main {
   height: 100vh;
@@ -646,6 +742,11 @@ FOOTER
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media (max-width: 37.5em) {
+    .review {
+      margin: 0;
+      padding: 0;
+      padding-left: 0; } }
   @media (max-width: 6rem) {
     .review {
       width: 50%; } }

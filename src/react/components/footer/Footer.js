@@ -12,14 +12,15 @@ const Footer = () => {
       </div>
       <div className='row'>
         <div className='col-1-of-2'>
-          <div className='footer__navigation'></div>
-          <ul>
-            <li className='footer__item'><a href='/' className='footer__link'>Company</a></li>
-            <li className='footer__item'><a href='/' className='footer__link'>Contact Us</a></li>
-            <li className='footer__item'><a href='/' className='footer__link'>Careers</a></li>
-            <li className='footer__item'><a href='/' className='footer__link'>Privacy Policy</a></li>
-            <li className='footer__item'><a href='/' className='footer__link'>Terms</a></li>
-          </ul>
+          <div className='footer__navigation'>
+            <ul>
+              <li className='footer__item'><a href='/' className='footer__link'>Company</a></li>
+              <li className='footer__item'><a href='/' className='footer__link'>Contact Us</a></li>
+              <li className='footer__item'><a href='/' className='footer__link'>Careers</a></li>
+              <li className='footer__item'><a href='/' className='footer__link'>Privacy Policy</a></li>
+              <li className='footer__item'><a href='/' className='footer__link'>Terms</a></li>
+            </ul>
+          </div>
         </div>
         <div className='col-1-of-2'>
           <p className='footer__copyright'>
