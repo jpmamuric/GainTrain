@@ -4,7 +4,7 @@ import '../../../assets/sass/main.scss';
 import Data from './PricingData.json'
 
 const Pricing = () => (
-  <section className='section-tours' id='pricing'>
+  <section className='section-pricing' id='pricing'>
     <div className='util-center-text util-margin-bottom-big' >
       <h2 className='heading-secondary'> Most Popular Courses </h2>
     </div>

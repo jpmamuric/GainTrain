@@ -1,0 +1,114 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(126, 213,111,0.8),
+    rgba(40, 180,131,0.8)),
+    url('../../../assets/img/hero.jpg');
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  //create silouette shape for brackground image
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
+  }
+
+  &__logo-container {
+    // position from its parent container (.header)
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    // width is adjusted by browser
+    height: 3.5rem;
+  }
+
+  &__heading-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    //shift from parent element
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    a {
+      animation: 2s ease-out 2s backwards fadeIn;
+    }
+  }
+}
+
+.heading {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  &-main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation: moveInUp 2s ease-out;
+    backface-visibility: hidden;
+    /*
+      animation-timing-function: ease-in; starts slow and accelerate over time.
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 3
+      animation-delay: 3s
+    */
+
+    @include respond(phone) {
+      font-size: 5rem;
+    }
+  };
+
+  &-sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    animation: 2s ease-out 2s backwards fadeIn;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
+  }
+
+  &-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+
+    // how to set text color to background color
+    background-image: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    // add transition property for transforms to work.
+    transition: all .2s;
+
+    @include respond(tablet-portrait) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      letter-spacing: .2rem;
+      transform: skewY(-10deg) skewX(15deg);
+      text-shadow: .5rem 1rem 2rem rgba($color-black, .2)
+    }
+  }
+
+}

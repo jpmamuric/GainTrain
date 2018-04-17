@@ -5,10 +5,18 @@
 
   &-margin-bottom-big {
     margin-bottom: 8rem;
+
+    @include respond(phone) {
+      margin-bottom: 5rem !important;
+    }
   }
 
   &-margin-bottom-med {
-    margin-bottom: 4rem
+    margin-bottom: 4rem;
+
+    @include respond(phone) {
+      margin-bottom: 3rem !important;
+    }
   }
 
   &-margin-bottom-small {
