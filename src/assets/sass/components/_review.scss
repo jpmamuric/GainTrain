@@ -46,10 +46,21 @@
   }
 
   &__img {
+    background-size: cover;
     height: 100%;
     backface-visibility: hidden;
-    transform: translateX(-4rem) scale(1.4);
+    transform: translateX(-2rem) scale(1.4);
     transition: all .5s;
+    width: 100%;
+
+
+    &-1 {
+      background-image: url('../../../assets/img/nat-8.jpg');
+    }
+
+    &-2 {
+      background-image: url('../../../assets/img/nat-9.jpg');
+    }
   }
 
   &__text {
@@ -83,7 +94,7 @@
   }
 
   &:hover &__img {
-    transform: translateX(-4rem) scale(1);
+    transform: translateX(0) scale(1.2);
     filter: blur(.3rem) brightness(90%);
   }
 }

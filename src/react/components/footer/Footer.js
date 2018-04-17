@@ -3,12 +3,17 @@ import React from 'react';
 import '../../../assets/sass/main.scss';
 
 import greenLogo2 from '../../../assets/img/favicon.png'
+import whiteLogo from '../../../assets/img/logo-white.png'
 
 const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer__logo-box'>
-        <img src={greenLogo2} alt='gain train' />
+        <picture>
+          <source srcSet={greenLogo2} media="(max-width: 37.5em)"/>
+          <img src={whiteLogo} alt='gain train' className='footer__logo'/>
+        </picture>
+
       </div>
       <div className='row'>
         <div className='col-1-of-2'>

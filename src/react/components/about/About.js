@@ -2,9 +2,12 @@ import React from 'react';
 
 import '../../../assets/sass/main.scss';
 
-import nat1 from '../../../assets/img/nat-1-large.jpg'
-import nat2 from '../../../assets/img/nat-2-large.jpg'
-import nat3 from '../../../assets/img/nat-3-large.jpg'
+import nat1Large from '../../../assets/img/nat-1-large.jpg'
+import nat1      from '../../../assets/img/nat-1.jpg'
+import nat2Large from '../../../assets/img/nat-2-large.jpg'
+import nat2      from '../../../assets/img/nat-2.jpg'
+import nat3Large from '../../../assets/img/nat-3-large.jpg'
+import nat3      from '../../../assets/img/nat-3.jpg'
 
 const About = () => {
   return (
@@ -31,9 +34,19 @@ const About = () => {
         </div>
         <div className='col-1-of-2'>
           <div className='composition'>
-            <img src={nat1} alt='Nature 1' className='composition__photo composition__photo--p1'/>
-            <img src={nat2} alt='Nature 2' className='composition__photo composition__photo--p2'/>
-            <img src={nat3} alt='Nature 3' className='composition__photo composition__photo--p3'/>
+            { /* Resolution Switching*/ }
+            <img
+              srcSet={`${nat1} 1x, ${nat1Large} 2x`}
+              sizes='(max-width: 56.25em), 18vw (max-width: 37.5em) 26vw, 18.75em'
+              alt='Nature 1'
+              className='composition__photo composition__photo--p1'
+              src={nat1Large}
+              />
+
+            { /* Density Switching*/ }
+            <img srcSet={`${nat2} 1x, ${nat2Large} 2x`} alt='Nature 2' className='composition__photo composition__photo--p2'/>
+
+            <img srcSet={`${nat3} 1x, ${nat3Large} 2x`} alt='Nature 3' className='composition__photo composition__photo--p3'/>
           </div>
         </div>
       </div>

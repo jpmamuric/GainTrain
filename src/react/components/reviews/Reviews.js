@@ -2,8 +2,7 @@ import React from 'react';
 
 import reviewData from './Reviews.json';
 import videoMp4 from '../../../assets/img/video.mp4';
-import videoWebm from '../../../assets/img/video.webm';
-import image8 from '../../../assets/img/nat-8.jpg';
+import videoWebm from '../../../assets/img/video.webm'
 import '../../../assets/sass/main.scss';
 
 const Reviews = () => (
@@ -31,7 +30,7 @@ const Reviews = () => (
           <div className='row' key={review.name}>
             <div className='review'>
               <figure className='review__shape'>
-                <img src={image8} alt='person review' className='review__img'/>
+                <div className={`review__img ${review.picture}`}/>
                 <figcaption className='review__caption'>{review.name}</figcaption>
               </figure>
               <div className='review__text'>

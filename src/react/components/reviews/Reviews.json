@@ -1,11 +1,13 @@
 [
   {
     "name": "John Doe",
+    "picture": "review__img-1",
     "heading":"I had an amazing time!",
     "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur. Aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur."
   },
   {
     "name": "Jane Doe",
+    "picture": "review__img-2",
     "heading":"Worth every penny!",
     "comment":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur. Aliquet consectetur. Nunc sed neque feugiat lacus aliquet consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur."
   }

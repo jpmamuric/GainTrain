@@ -140,12 +140,15 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("../../../assets/img/hero.jpg");
+  background-image: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url("../../../assets/img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to left bottom, rgba(255, 119, 48, 0.8), rgba(40, 180, 131, 0.8)), url("../../../assets/img/hero.jpg"); } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -231,7 +234,8 @@ body {
         width: 100%; } }
   .footer__logo {
     width: 15rem;
-    height: auto; }
+    height: auto;
+    padding-bottom: 2rem; }
   .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
@@ -476,11 +480,11 @@ REVIEWS
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-radius: 0.3rem; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../../../assets/img/nat-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../../../assets/img/nat-3.jpg"); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../../../assets/img/nat-5.jpg"); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../../../assets/img/nat-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../../../assets/img/nat-6.jpg"); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -854,10 +858,16 @@ REVIEWS
       .review__shape {
         transform: translateX(-3rem) skewX(0); } }
   .review__img {
+    background-size: cover;
     height: 100%;
     backface-visibility: hidden;
-    transform: translateX(-4rem) scale(1.4);
-    transition: all .5s; }
+    transform: translateX(-2rem) scale(1.4);
+    transition: all .5s;
+    width: 100%; }
+    .review__img-1 {
+      background-image: url("../../../assets/img/nat-8.jpg"); }
+    .review__img-2 {
+      background-image: url("../../../assets/img/nat-9.jpg"); }
   .review__text {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
@@ -879,5 +889,5 @@ REVIEWS
     opacity: 1;
     transform: translate(-50%, -50%); }
   .review:hover .review__img {
-    transform: translateX(-4rem) scale(1);
+    transform: translateX(0) scale(1.2);
     filter: blur(0.3rem) brightness(90%); }
