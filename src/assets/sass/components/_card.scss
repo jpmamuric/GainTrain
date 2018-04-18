@@ -180,7 +180,11 @@
     font-weight: 100;
   }
 
-  @include respond(tablet-portrait) {
+  // @include respond(tablet-portrait), impossible to add second condition to mixin.
+  @media  only screen and (max-width: 56.25em),
+   // For Touch Screens
+   only screen and (hover: none)
+   {
     height: auto;
     background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);

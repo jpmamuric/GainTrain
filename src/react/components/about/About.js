@@ -14,17 +14,17 @@ const About = () => {
     <section className='section-about' id='about'>
       <div className='util-center-text util-margin-bottom-big'>
         <h2 className='heading-secondary'>
-          Improve your creativity with dynamic training
+          Come see the wonders of nature
         </h2>
       </div>
 
       <div className='row'>
         <div className='col-1-of-2'>
-          <h3 className='heading-tertiary util-margin-bottom-small'> Online group classes </h3>
+          <h3 className='heading-tertiary util-margin-bottom-small'> Explore the uplifting serenity of nature </h3>
           <p className='paragraph'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur quis nec ante. Suspendisse dapibus feugiat nisl, vitae pellentesque leo porta pretium
           </p>
-          <h3 className='heading-tertiary  util-margin-bottom-small'> One-on-One training </h3>
+          <h3 className='heading-tertiary  util-margin-bottom-small'> Professional guides on duty </h3>
           <p className='paragraph'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed neque feugiat lacus aliquet consectetur.
           </p>

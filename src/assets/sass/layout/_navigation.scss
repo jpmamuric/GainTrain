@@ -12,7 +12,7 @@
     top: 6rem;
     right: 6rem;
     border-radius: 50%;
-    z-index: 2000;
+    z-index: 4000;
     text-align: center;
     cursor: pointer;
 
@@ -51,7 +51,10 @@
       top: 3.5rem;
       right: 3.5rem;
     }
+  }
 
+  &__clicked {
+    transform: scale(80);
 
   }
 
@@ -76,7 +79,7 @@
 
 
   &__list {
-    @include centerVertical;
+    // @include centerVertical;
     list-style: none;
     text-align: center;
     width: 100%;
@@ -161,4 +164,88 @@
     top: 0;
     transform: rotate(-135deg);
   }
+}
+
+// Custom CSS with Javscript
+.nav {
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    transition: all 0.3s ease-out;
+
+
+    &-show {
+      opacity: 1;
+      z-index: 100;
+    }
+
+    &-hide {
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    @include centerVertical;
+
+    &-show {
+      opacity: 1;
+      visibility: visible;
+      z-index: 100;
+    }
+
+    &-hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+
+}
+
+.nav__icon {
+  position: relative;
+  margin-top: 3.5rem;
+
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: $color-grey-dark;
+    display: inline-block;
+
+  }
+
+  // in order for before/after pseudo elements to actually appear, content property must be defined
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+  }
+
+  &::before { top: -1rem }
+  &::after { top: 1rem }
+}
+
+.nav__icon {
+  background-color: transparent;
+}
+
+.nav__button .nav__icon::before{
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.nav__button .nav__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }

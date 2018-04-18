@@ -21,7 +21,7 @@ const Reviews = () => (
 
     <div className='util-center-text util-margin-bottom-big'>
       <h2 className='heading-secondary'>
-        We strive to improve your success
+        Latest Reviews
       </h2>
     </div>
 

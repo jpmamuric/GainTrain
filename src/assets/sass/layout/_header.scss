@@ -14,13 +14,13 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
 
   //192 apple resolution screen default
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-         (min-width: 125em){
-    background-image: linear-gradient(
-      to left bottom,
-      rgba($color-secondary-dark,0.8),
-      rgba(40, 180,131,0.8)),
-      url('../../../assets/img/hero.jpg');
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+         only screen and (min-width: 125em){
+           background-image: linear-gradient(
+              to left bottom,
+              rgba($color-secondary-dark,0.8),
+              rgba(40, 180,131,0.8)),
+              url('../../../assets/img/hero.jpg');
   }
 
   @include respond(phone) {

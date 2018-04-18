@@ -1,6 +1,6 @@
 [
  {
-   "heading": "Fire Training",
+   "heading": "Burning Passion",
    "details": {
      "days": "7 Day Course",
      "size": "Up to 30 people",
@@ -13,11 +13,11 @@
    "backModifier": "card__side--back-1"
  },
  {
-   "heading": "Water Training",
+   "heading": "One with the Sea",
    "details": {
      "days": "15 Day Course",
      "size": "Up to 30 people",
-     "online": "Available",
+     "online": "Limited",
      "difficulty": "Medium"
    },
    "ctaPrice": "199",
@@ -26,10 +26,10 @@
    "backModifier": "card__side--back-2"
  },
  {
-   "heading": "Earth Training",
+   "heading": "Mountains Memories",
    "details": {
      "days": "30 Day Course",
-     "size": "Up to 30 people",
+     "size": "Up to 10 people",
      "online": "Available",
      "difficulty": "Hard"
    },

@@ -10,8 +10,8 @@ const Header = () => (
     </div>
     <div className='header__heading-container'>
       <h1 className='heading'>
-        <span className='heading-main'>Gain Train</span>
-        <span className='heading-sub'>build unstoppable thoughts</span>
+        <span className='heading-main'>Nature Up</span>
+        <span className='heading-sub'>Add balance to your life</span>
       </h1>
       <a href='#about' className='btn btn--white'>Discover</a>
     </div>

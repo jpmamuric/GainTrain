@@ -6,7 +6,7 @@ import Data from './PricingData.json'
 const Pricing = () => (
   <section className='section-pricing' id='pricing'>
     <div className='util-center-text util-margin-bottom-big' >
-      <h2 className='heading-secondary'> Most Popular Courses </h2>
+      <h2 className='heading-secondary'> Most Popular </h2>
     </div>
 
     <div className='row'>
@@ -25,7 +25,7 @@ const Pricing = () => (
                   <ul>
                     <li>{course.details.days}</li>
                     <li>{course.details.size}</li>
-                    <li>Online: {course.details.online}</li>
+                    <li>Registration: {course.details.online}</li>
                     <li>Difficulty : {course.details.difficulty}</li>
                   </ul>
                 </div>
