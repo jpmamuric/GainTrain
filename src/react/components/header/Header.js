@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../../../assets/sass/main.scss';
 import logo from '../../../assets/img/logo-white.png'
 
 const Header = () => (
@@ -13,7 +12,7 @@ const Header = () => (
         <span className='heading-main'>Nature Up</span>
         <span className='heading-sub'>Add balance to your life</span>
       </h1>
-      <a href='#about' className='btn btn--white'>Discover</a>
+      <a href='#About' className='btn btn--white'>Discover</a>
     </div>
 
   </header>

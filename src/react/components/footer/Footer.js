@@ -1,9 +1,12 @@
 import React from 'react';
 
-import '../../../assets/sass/main.scss';
-
 import greenLogo2 from '../../../assets/img/favicon.png'
 import whiteLogo from '../../../assets/img/logo-white.png'
+
+const footingItems = [
+   'Company', 'Contact', 'Careers', 'Privacy', 'Terms'
+];
+
 
 const Footer = () => {
   return (
@@ -19,11 +22,11 @@ const Footer = () => {
         <div className='col-1-of-2'>
           <div className='footer__navigation'>
             <ul>
-              <li className='footer__item'><a href='/' className='footer__link'>Company</a></li>
-              <li className='footer__item'><a href='/' className='footer__link'>Contact Us</a></li>
-              <li className='footer__item'><a href='/' className='footer__link'>Careers</a></li>
-              <li className='footer__item'><a href='/' className='footer__link'>Privacy Policy</a></li>
-              <li className='footer__item'><a href='/' className='footer__link'>Terms</a></li>
+              {
+                footingItems.map((item, i) => (
+                  <li key={i} className='footer__item'><a href='/' className='footer__link'>{item}</a></li>
+                ))
+              }
             </ul>
           </div>
         </div>

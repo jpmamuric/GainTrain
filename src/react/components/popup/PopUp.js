@@ -1,6 +1,5 @@
 import React from 'react';
 
-import '../../../assets/sass/main.scss';
 import image8 from '../../../assets/img/nat-8.jpg';
 import image9 from '../../../assets/img/nat-9.jpg';
 
@@ -12,7 +11,7 @@ const Popup = () => (
         <img src={image9} alt="Tour display" className='popup__img'/>
       </div>
       <div className="popup__right">
-        <a href="#pricing" className="popup__close">&times;</a>
+        <a href="#Pricing" className="popup__close">&times;</a>
         <h2 className="heading-secondary util-margin-bottom-med">Start Booking Now</h2>
         <h3 className="heading-tertiary">Important &ndash; </h3>
         <p className="popup__text">

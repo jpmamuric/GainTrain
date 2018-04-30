@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../../../assets/sass/main.scss';
-
 import nat1Large from '../../../assets/img/nat-1-large.jpg'
 import nat1      from '../../../assets/img/nat-1.jpg'
 import nat2Large from '../../../assets/img/nat-2-large.jpg'
@@ -11,7 +9,7 @@ import nat3      from '../../../assets/img/nat-3.jpg'
 
 const About = () => {
   return (
-    <section className='section-about' id='about'>
+    <section className='section-about' id='About'>
       <div className='util-center-text util-margin-bottom-big'>
         <h2 className='heading-secondary'>
           Come see the wonders of nature

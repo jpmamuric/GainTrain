@@ -1,10 +1,9 @@
 import React from 'react';
 
-import '../../../assets/sass/main.scss';
 import Data from './PricingData.json'
 
 const Pricing = () => (
-  <section className='section-pricing' id='pricing'>
+  <section className='section-pricing' id='Pricing'>
     <div className='util-center-text util-margin-bottom-big' >
       <h2 className='heading-secondary'> Most Popular </h2>
     </div>

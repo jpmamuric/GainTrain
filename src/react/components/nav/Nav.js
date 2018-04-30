@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../../redux/actions/action_popup';
-import '../../../assets/sass/main.scss';
+
 
 /*
+  Checkbox Hack , no Javascript.
+
   const checkboxHack = (
     <div>
       <input type='checkbox' className='navigation__checkbox' id='nav-toggle'
@@ -25,6 +27,8 @@ import '../../../assets/sass/main.scss';
     </div>
   )
 */
+
+const Links = [ 'About', 'Benefits', 'Pricing', 'Reviews' ];
 
 class Nav extends Component {
 
@@ -48,10 +52,11 @@ class Nav extends Component {
           } >
           <nav className={this.props.isOpen ? 'nav__content nav__content-show':'nav__content nav__content-hide'}>
             <ul className='navigation__list'>
-              <li onClick={this.handleToggle} className='navigation__item'><a href='#about' className='navigation__link'>About</a></li>
-              <li onClick={this.handleToggle} className='navigation__item'><a href='#benefits' className='navigation__link'>Benefits</a></li>
-              <li onClick={this.handleToggle} className='navigation__item'><a href='#pricing' className='navigation__link'>Pricing</a></li>
-              <li onClick={this.handleToggle} className='navigation__item'><a href='#review' className='navigation__link'>Reviews</a></li>
+              {
+                Links.map( (link, i) => (
+                  <li key={i} onClick={this.handleToggle} className='navigation__item'><a href={`#${link}`} className='navigation__link'>{link}</a></li>
+                ))
+              }
             </ul>
           </nav>
         </div>
